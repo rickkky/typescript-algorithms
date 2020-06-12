@@ -1,0 +1,24 @@
+{
+  "name": "typescript-data-structures-and-algorithms",
+  "version": "0.0.1",
+  "description": "Data structures and algorithms implemented by TypeScript.",
+  "keywords": [
+    "typescript",
+    "data-structure",
+    "algorithm"
+  ],
+  "license": "MIT",
+  "author": "ricky",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rickkky/typescript-data-structures-and-algorithms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rickkky/typescript-data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/rickkky/typescript-data-structures-and-algorithms#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
