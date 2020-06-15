@@ -19,7 +19,7 @@
   "homepage": "https://github.com/rickkky/typescript-data-structures-and-algorithms#readme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "commit:cz": "git-cz"
   },
   "husky": {
@@ -36,10 +36,14 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^26.0.0",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
     "husky": "^4.2.5",
+    "jest": "^26.0.1",
     "prettier": "2.0.5",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.5"
   }
 }
