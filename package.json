@@ -7,9 +7,8 @@
     "data-structure",
     "algorithm"
   ],
-  "license": "MIT",
   "author": "ricky",
-  "main": "index.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/rickkky/typescript-data-structures-and-algorithms.git"
@@ -18,7 +17,29 @@
     "url": "https://github.com/rickkky/typescript-data-structures-and-algorithms/issues"
   },
   "homepage": "https://github.com/rickkky/typescript-data-structures-and-algorithms#readme",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit:cz": "git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5",
+    "prettier": "2.0.5",
+    "pretty-quick": "^2.0.1"
   }
 }
