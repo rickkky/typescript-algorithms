@@ -1,4 +1,4 @@
-import { Compare } from 'src/shared'
+import { Compare } from 'src/utils'
 
 export function tester(
   description: string,

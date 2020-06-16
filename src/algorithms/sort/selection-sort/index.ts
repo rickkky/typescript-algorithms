@@ -1,4 +1,4 @@
-import { Compare, compareAny } from 'src/shared/compare'
+import { Compare, compareAny } from 'src/utils'
 
 export function selectionSort<T>(
   origin: T[],
