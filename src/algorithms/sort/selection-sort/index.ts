@@ -12,15 +12,19 @@ export function selectionSort<T>(
   }
 
   for (let i = 0; i < len - 1; ++i) {
+    let minIndex = i
+
     for (let j = i + 1; j < len; ++j) {
-      if (compare(target[i], target[j]) <= 0) {
+      if (compare(target[minIndex], target[j]) <= 0) {
         continue
       }
 
-      let temp = target[i]
-      target[i] = target[j]
-      target[j] = temp
+      minIndex = j
     }
+
+    let temp = target[i]
+    target[i] = target[minIndex]
+    target[minIndex] = temp
   }
 
   return target
