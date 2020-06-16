@@ -1,9 +1,9 @@
 import { Compare, compareAny } from 'src/shared/compare'
 
-export const bubbleSort = <T>(
+export function bubbleSort<T>(
   origin: T[],
   compare: Compare<T> = compareAny,
-): T[] => {
+): T[] {
   let target = origin
   let len = target.length
 
