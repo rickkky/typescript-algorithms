@@ -5,7 +5,7 @@ export function tester(
   sort: <T>(origin: T[], compare?: Compare<T>) => T[],
 ) {
   describe(description, () => {
-    it('sort numbers', () => {
+    it('sort empty or one-element list', () => {
       let origin: number[] = []
       let target: number[] = []
       expect(sort(origin)).toStrictEqual(target)
@@ -13,6 +13,15 @@ export function tester(
       origin = [0]
       target = [0]
       expect(sort(origin)).toStrictEqual(target)
+
+      origin = [1]
+      target = [1]
+      expect(sort(origin)).toStrictEqual(target)
+    })
+
+    it('sort numbers', () => {
+      let origin: number[] = []
+      let target: number[] = []
 
       origin = [1, 0]
       target = [0, 1]
@@ -52,11 +61,6 @@ export function tester(
     it('sort strings', () => {
       let origin: string[] = []
       let target: string[] = []
-      expect(sort(origin)).toStrictEqual(target)
-
-      origin = ['a']
-      target = ['a']
-      expect(sort(origin)).toStrictEqual(target)
 
       origin = ['b', 'a']
       target = ['a', 'b']
