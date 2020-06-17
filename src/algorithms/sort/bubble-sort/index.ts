@@ -7,7 +7,7 @@ export function bubbleSort<T>(
   let target = origin
   let len = target.length
 
-  if (len <= 1) {
+  if (len < 2) {
     return target
   }
 

@@ -7,12 +7,12 @@ export function insertionSort<T>(
   let target = origin
   let len = target.length
 
-  if (len <= 1) {
+  if (len < 2) {
     return target
   }
 
   for (let i = 1; i < len; ++i) {
-    for (let j = i; j >= 1; --j) {
+    for (let j = i; j > 0; --j) {
       if (compare(target[j], target[j - 1]) >= 0) {
         break
       }
