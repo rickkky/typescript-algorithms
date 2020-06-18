@@ -4,11 +4,11 @@ export function bubbleSort<T>(
   origin: T[],
   compare: Compare<T> = compareAny,
 ): T[] {
-  let target = origin
-  let len = target.length
+  let len = origin.length
+  let answer = origin
 
   if (len < 2) {
-    return target
+    return answer
   }
 
   // flag that holds info about whether the swap has occur or not
@@ -18,13 +18,13 @@ export function bubbleSort<T>(
     swapped = false
 
     for (let j = 0; j < i; ++j) {
-      if (compare(target[j], target[j + 1]) <= 0) {
+      if (compare(answer[j], answer[j + 1]) <= 0) {
         continue
       }
 
-      let temp = target[j]
-      target[j] = target[j + 1]
-      target[j + 1] = temp
+      let temp = answer[j]
+      answer[j] = answer[j + 1]
+      answer[j + 1] = temp
 
       swapped = true
     }
@@ -34,7 +34,7 @@ export function bubbleSort<T>(
     }
   }
 
-  return target
+  return answer
 }
 
 export default bubbleSort

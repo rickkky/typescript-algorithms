@@ -4,30 +4,30 @@ export function selectionSort<T>(
   origin: T[],
   compare: Compare<T> = compareAny,
 ): T[] {
-  let target = origin
-  let len = target.length
+  let len = origin.length
+  let answer = origin
 
   if (len < 2) {
-    return target
+    return answer
   }
 
   for (let i = 0; i < len - 1; ++i) {
     let minIndex = i
 
     for (let j = i + 1; j < len; ++j) {
-      if (compare(target[minIndex], target[j]) <= 0) {
+      if (compare(answer[minIndex], answer[j]) <= 0) {
         continue
       }
 
       minIndex = j
     }
 
-    let temp = target[i]
-    target[i] = target[minIndex]
-    target[minIndex] = temp
+    let temp = answer[i]
+    answer[i] = answer[minIndex]
+    answer[minIndex] = temp
   }
 
-  return target
+  return answer
 }
 
 export default selectionSort

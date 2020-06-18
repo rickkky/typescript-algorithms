@@ -4,26 +4,26 @@ export function insertionSort<T>(
   origin: T[],
   compare: Compare<T> = compareAny,
 ): T[] {
-  let target = origin
-  let len = target.length
+  let len = origin.length
+  let answer = origin
 
   if (len < 2) {
-    return target
+    return answer
   }
 
   for (let i = 1; i < len; ++i) {
     for (let j = i; j > 0; --j) {
-      if (compare(target[j], target[j - 1]) >= 0) {
+      if (compare(answer[j], answer[j - 1]) >= 0) {
         break
       }
 
-      let temp = target[j - 1]
-      target[j - 1] = target[j]
-      target[j] = temp
+      let temp = answer[j - 1]
+      answer[j - 1] = answer[j]
+      answer[j] = temp
     }
   }
 
-  return target
+  return answer
 }
 
 export default insertionSort
